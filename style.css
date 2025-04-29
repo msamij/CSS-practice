@@ -5,7 +5,7 @@
 }
 
 html {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-size: 62.5%;
 }
 
@@ -46,7 +46,7 @@ html {
   background-color: brown;
 } */
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 80px 200px 80px;
@@ -102,4 +102,53 @@ html {
   align-items: center;
   font-size: 24px;
   border-radius: 8px;
+} */
+
+.grid-container {
+  display: grid;
+  /* height: 80vh; */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  /* justify-items: center;
+  align-items: center; */
+  /* align-content: center; */
 }
+
+.item {
+  /* height: 200px; */
+  /* width: 200px; */
+  /* padding: 20px; */
+  /* border: 10px solid black; */
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 24px;
+  /* align-self: center;
+  justify-self: start; */
+}
+
+/*
+Core Grid Container Properties
+
+| Property                  | What it does                                          |
+|:--------------------------|:-----------------------------------------------------|
+| `display: grid`             | Turns the element into a grid container              |
+| `grid-template-columns`     | Defines the number and size of columns               |
+| `grid-template-rows`        | Defines the number and size of rows                  |
+| `gap`                       | Space between rows and columns                      |
+| `justify-items`             | Aligns items horizontally in their grid area         |
+| `align-items`               | Aligns items vertically in their grid area           |
+| `justify-content`           | Aligns the whole grid horizontally within the container |
+| `align-content`             | Aligns the whole grid vertically within the container |
+
+Child (Grid Item) Properties
+  
+  | Property               | What it does                            |
+|:----------------------|:----------------------------------------|
+| `grid-column`          | Controls how many columns an item spans |
+| `grid-row`             | Controls how many rows an item spans    |
+| `justify-self`         | Aligns an individual item horizontally |
+| `align-self`           | Aligns an individual item vertically   |
+*/
